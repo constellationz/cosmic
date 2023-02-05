@@ -39,8 +39,10 @@ for config in $(ls -A $CONFIG_DIR); do
 	sync $CONFIG_DIR/$config $HOME/.config/
 done
 
-# Set wallpaper
-SCRIPT_DIR=$(dirname $0)
-$SCRIPT_DIR/set-wallpaper.sh $SCRIPT_DIR/../wallpapers/cosmic_4_3.svg
+# Set wallpaper if not already set
+if [ ! -f $HOME/.wallpaper ]; then
+	SCRIPT_DIR=$(dirname $0)
+	$SCRIPT_DIR/set-wallpaper.sh $SCRIPT_DIR/../wallpapers/cosmic_16_9.svg
+fi
 
 echo "Done!"

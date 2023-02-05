@@ -8,7 +8,9 @@ pipewire
 alsa-utils
 networkmanager
 sway
+foot
 polkit
+nemo
 waylock
 waybar
 swaybg
