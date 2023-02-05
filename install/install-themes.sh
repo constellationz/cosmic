@@ -8,9 +8,9 @@ mkdir -p $HOME/.config/papirus-folders
 # Set gtk themes
 gsettings set org.gnome.desktop.interface gtk-theme "Materia-dark-compact"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-gsettings set org.gnome.desktop.interface font-name "Hack 10"
-gsettings set org.gnome.desktop.interface document-font-name "Hack 10"
-gsettings set org.gnome.desktop.interface monospace-font-name "Hack 10"
+gsettings set org.gnome.desktop.interface font-name "Fira Code Medium 11"
+gsettings set org.gnome.desktop.interface document-font-name "Fira Code Medium 11"
+gsettings set org.gnome.desktop.interface monospace-font-name "Fira Code Medium 10"
 
 # Change papirus folder color
 if [ ! -f "$HOME/.config/papirus-folders/theme-updated" ]; then
@@ -38,11 +38,5 @@ for config in $(ls -A $CONFIG_DIR); do
 	echo "Syncing config/$config"
 	sync $CONFIG_DIR/$config $HOME/.config/
 done
-
-# Set wallpaper if not already set
-if [ ! -f $HOME/.wallpaper ]; then
-	SCRIPT_DIR=$(dirname $0)
-	$SCRIPT_DIR/set-wallpaper.sh $SCRIPT_DIR/../wallpapers/cosmic_16_9.svg
-fi
 
 echo "Done!"
