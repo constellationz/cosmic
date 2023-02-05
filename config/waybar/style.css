@@ -1,15 +1,8 @@
-/*
-__        __          _
-\ \      / /_ _ _   _| |__   __ _ _ __
- \ \ /\ / / _` | | | | '_ \ / _` | '__|
-  \ V  V / (_| | |_| | |_) | (_| | |
-   \_/\_/ \__,_|\__, |_.__/ \__,_|_|
-                |___/
-*/
+/* Waybar */
 
 * {
   font-size: 14px;
-  font-family: 'Hack';
+  font-family: 'Fira Code Medium';
   border-radius: 0px;
   padding: 4px;
   padding-top: 2px;
@@ -17,7 +10,7 @@ __        __          _
 }
 
 window#waybar {
-  background: rgba(25, 25, 25, 1.0);
+  background: rgba(19, 19, 19, 0.75);
   color: #ffffff;
 }
 
@@ -30,20 +23,25 @@ window#waybar {
   padding: 0px;
   color: #ffffff;
   margin-right: 4px;
-  border-bottom: 2px solid transparent;
-  padding-top: 2px;
+  border-top: 2px solid transparent;
+  padding-bottom: 2px;
 }
 
 #workspaces button.persistent {
   color: #bbbbbb;
-  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+}
+
+#workspaces button.urgent {
+    border-top: 2px solid #c9545d;
+	background-color: #871c25; 
+    color: #c9545d;
 }
 
 #workspaces button.focused {
-  color: #ffffff;
-  background: rgba(50, 50, 50, 0.5);
-  border-bottom: 2px solid #ffffff;
-  padding-top: 2px;
+  border-top: 2px solid #4c7899;
+  padding-bottom: 2px;
+  background-color: #285577;
 }
 
 #workspaces button:hover {

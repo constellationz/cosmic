@@ -1,10 +1,10 @@
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/window", "sway/mode"],
-    "modules-center": [],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery", "tray"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
