@@ -17,7 +17,7 @@ __        __          _
 }
 
 window#waybar {
-  background: #00000000;
+  background: rgba(0, 0, 0, 0.5);
   color: #ffffff;
 }
 

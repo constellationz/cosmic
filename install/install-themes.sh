@@ -35,14 +35,6 @@ sync () {
 }
 
 for config in $(ls -A $CONFIG_DIR); do
-	# Move existing files
-	TOCONFIG=$HOME/.config/$config
-	if [ -e "$TOCONFIG" ]; then
-		echo "Backing up existing config $config to $TOCONFIG.old"
-		mv -e "$TOCONFIG" "$TOCONFIG"
-	fi
-
-	# Sync files
 	echo "Syncing config/$config"
 	sync $CONFIG_DIR/$config $HOME/.config/
 done
