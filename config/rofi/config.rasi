@@ -8,13 +8,13 @@
     font:         "Hack 12";
     inputfont:    "Hack 20";
 
-    bg0:    #101010F5;
-    bg1:    #bbbbbb55;
-    bg2:    #404040FF;
+    bg0:    #191919FF;
+    bg1:    #50505055;
+    bg2:    #30303055;
 
     fg0:    #DEDEDE;
     fg1:    #FFFFFF;
-    fg2:    #bbbbbb55;
+    fg2:    #606060;
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -28,10 +28,10 @@ window {
     background-color:   @bg0;
     border-color:       @bg1;
 
-    location:       center;
+    location:       north;
     width:          640;
-    border-radius:  8;
-    border:         2px;
+    border-radius:  4;
+    border:         1px;
 }
 
 inputbar {

@@ -26,7 +26,7 @@ set $term foot
 
 ### Preferred launcher
 #
-set $menu rofi -show drun | xargs swaymsg exec --
+set $menu rofi -theme ~/.config/rofi/config.rasi -show drun -show-icons | xargs swaymsg exec --
 
 ### Output configuration
 #
