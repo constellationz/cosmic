@@ -39,4 +39,10 @@ for config in $(ls -A $CONFIG_DIR); do
 	sync $CONFIG_DIR/$config $HOME/.config/
 done
 
+# Set wallpaper if it hasn't been set already
+if [ ! -f "$HOME/.wallpaper" ]; then
+	echo "Setting wallpaper for the first time..."	
+	$SCRIPT_DIR/set-wallpaper.sh /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png
+fi
+
 echo "Done!"
