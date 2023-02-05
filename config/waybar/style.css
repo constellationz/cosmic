@@ -1,0 +1,63 @@
+/*
+__        __          _
+\ \      / /_ _ _   _| |__   __ _ _ __
+ \ \ /\ / / _` | | | | '_ \ / _` | '__|
+  \ V  V / (_| | |_| | |_) | (_| | |
+   \_/\_/ \__,_|\__, |_.__/ \__,_|_|
+                |___/
+*/
+
+* {
+  font-size: 14px;
+  font-family: 'Hack';
+  border-radius: 0px;
+  padding: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+window#waybar {
+  background: #00000000;
+  color: #ffffff;
+}
+
+#workspaces,
+#tray {
+  padding: 0px;
+}
+
+#workspaces button {
+  padding: 0px;
+  color: #ffffff;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+#workspaces button.persistent {
+  color: #bbbbbb;
+}
+
+#workspaces button.focused {
+  color: #ffffff;
+  background: #303030;
+}
+
+#workspaces button:hover {
+  background: #202020;
+}
+
+#window {
+  color: #ffffff;
+}
+
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk {
+  color: #ffffff;
+  padding: 0 12px;
+  padding-left: 6px;
+}
+
