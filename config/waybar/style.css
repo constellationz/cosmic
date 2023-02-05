@@ -17,7 +17,7 @@ __        __          _
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(50, 50, 50, 0.5);
   color: #ffffff;
 }
 
@@ -29,21 +29,25 @@ window#waybar {
 #workspaces button {
   padding: 0px;
   color: #ffffff;
-  border-radius: 2px;
   margin-right: 4px;
+  border-bottom: 2px solid transparent;
+  padding-top: 2px;
 }
 
 #workspaces button.persistent {
   color: #bbbbbb;
+  border-bottom: 2px solid transparent;
 }
 
 #workspaces button.focused {
   color: #ffffff;
-  background: #303030;
+  background: rgba(50, 50, 50, 0.5);
+  border-bottom: 2px solid #ffffff;
+  padding-top: 2px;
 }
 
 #workspaces button:hover {
-  background: #202020;
+  background: rgba(30, 30, 30, 0.9);
 }
 
 #window {
