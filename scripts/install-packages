@@ -5,6 +5,7 @@ SCRIPT_DIR=$(dirname $0)
 
 awk '{print $1}' $SCRIPT_DIR/../install/packages | sudo xargs pacman -Syyu --noconfirm
 
+# Install AUR packages
 for package in $(awk '{print $1}' $SCRIPT_DIR/../install/aurpackages); do 
 	cd /tmp/
 	git clone https://aur.archlinux.org/$package.git
@@ -12,3 +13,12 @@ for package in $(awk '{print $1}' $SCRIPT_DIR/../install/aurpackages); do
 	git pull
 	makepkg -si --noconfirm
 done
+
+# Set defaults
+cat $SCRIPT_DIR/../install/defaults | while read line 
+do
+	echo $line
+	xdg-mime default $line
+done
+
+echo "Done!"
