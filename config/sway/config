@@ -14,9 +14,8 @@ exec_always rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -c ~/.co
 
 # Make certain windows floating by default
 #
-for_window [app_id="firefox"] floating enable, sticky enable, resize set width 1000px height 800px
-for_window [app_id="pavucontrol"] floating enable, sticky enable, resize set width 500px height 500px
-for_window [app_id="nemo"] floating enable, sticky enable, resize set width 500px height 500px
+for_window [app_id="pavucontrol"] floating enable, sticky enable, resize set width 550px height 500px
+for_window [app_id="nemo"] floating enable, sticky enable, resize set width 550px height 500px
 
 # Set font
 #
