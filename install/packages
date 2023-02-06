@@ -20,7 +20,7 @@ imv
 pavucontrol
 zathura
 zathura-pdf-mupdf
-materia-gtk-theme
+arc-gtk-theme
 papirus-icon-theme
 gnu-free-fonts
 rofi-emoji
@@ -34,3 +34,4 @@ wl-clipboard
 firefox
 bluez
 bluez-utils
+light

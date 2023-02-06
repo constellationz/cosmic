@@ -21,4 +21,7 @@ do
 	xdg-mime default $line
 done
 
+# Add default user to light group
+sudo usermod -aG video $USER
+
 echo "Done!"

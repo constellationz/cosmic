@@ -6,6 +6,18 @@ bar {
     swaybar_command waybar
 }
 
+# Make a wob instance for volume and brightness
+#
+set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+exec_always killall wob
+exec_always rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -c ~/.config/wob/wob.ini
+
+# Make certain windows floating by default
+#
+for_window [app_id="firefox"] floating enable, sticky enable, resize set width 1000px height 800px
+for_window [app_id="pavucontrol"] floating enable, sticky enable, resize set width 500px height 500px
+for_window [app_id="nemo"] floating enable, sticky enable, resize set width 500px height 500px
+
 # Set font
 #
 font pango:Fira Code Medium 11
@@ -21,11 +33,13 @@ exec wl-paste -t text --watch clipman store --no-persist
 
 # Change borders
 #
-default_border none
+# default_border none
+default_border pixel 2
 
 # Variables
 #
 # Logo key, use Mod1 for Alt
+set $alt Mod1
 set $mod Mod4
 set $left h
 set $down j
@@ -34,10 +48,37 @@ set $right l
 
 # Programs
 #
+set $searchengine https://www.duckduckgo.com/search?q={}
 set $term alacritty
 set $launcher rofi -theme ~/.config/rofi/config.rasi -show drun -show-icons | xargs swaymsg exec --
 set $switcher rofi -theme ~/.config/rofi/config.rasi -show window
 set $emoji rofi -theme ~/.config/rofi/config.rasi -show emoji
+set $screenshot_region grim -g "$(slurp -b 00000055 -w 1 -c ffffff55 -d -F 'Fira Code Medium')" - | wl-copy
+set $screenshot_screen grim - | wl-copy
+set $bang echo "" | rofi -theme ~/.config/rofi/config.rasi -dmenu | xargs -I{} xdg-open $searchengine
+
+# Screenshot
+#
+bindsym Print exec $screenshot_region
+bindsym $mod+Print exec $screenshot_screen
+
+# Change volume
+#
+set $volup amixer sset Master 2%+ | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
+set $voldown amixer sset Master 2%- | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
+set $mute amixer sset Master toggle | sed -En '/\[on\]/ s/.*\[([0-9]+)%\].*/\1/ p; /\[off\]/ s/.*/0/p' | head -1 > $WOBSOCK
+bindsym XF86AudioRaiseVolume exec $volup
+bindsym XF86AudioLowerVolume exec $voldown
+bindsym XF86AudioMute exec $mute
+bindsym $mod+bracketright exec $volup
+bindsym $mod+bracketleft exec $voldown
+bindsym $mod+backslash exec $mute
+
+# Change brightness
+set $lightup light -A 5 && light -G | cut -d'.' -f1 > $WOBSOCK
+set  $lightdown light -U 5 && light -G | cut -d'.' -f1 > $WOBSOCK
+bindsym XF86MonBrightnessUp exec $lightup
+bindsym XF86MonBrightnessDown exec $lightdown
 
 # Output configuration
 #
@@ -69,6 +110,10 @@ input type:keyboard {
 # Start a terminal
 bindsym $mod+Return exec $term
 
+# Start a bang search
+#
+bindsym $alt+Space exec $bang
+
 # Start your launcher
 #
 bindsym $mod+d exec $launcher
@@ -96,10 +141,6 @@ floating_modifier $mod normal
 # Reload the configuration file
 #
 bindsym $mod+Shift+c reload
-
-# Exit sway (logs you out of your Wayland session)
-#
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Move your focus around
 #

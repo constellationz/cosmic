@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+wshowkeys -b "#00000055" -f "#FFFFFFFF" -s "#AAAAAA55" -F "Fira Code Medium 24" -t 2 -a bottom -m 10
