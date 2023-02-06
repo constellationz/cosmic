@@ -33,7 +33,7 @@ exec wl-paste -t text --watch clipman store --no-persist
 # Change borders
 #
 # default_border none
-default_border pixel 2
+# default_border pixel 2
 
 # Variables
 #
