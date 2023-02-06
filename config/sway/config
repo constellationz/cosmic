@@ -19,6 +19,10 @@ output HDMI-A-1 mode 2560x1920@75Hz
 #
 exec wl-paste -t text --watch clipman store --no-persist
 
+# Change borders
+#
+default_border none
+
 # Variables
 #
 # Logo key, use Mod1 for Alt

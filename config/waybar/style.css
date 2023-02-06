@@ -10,7 +10,7 @@
 }
 
 window#waybar {
-  background: rgba(20, 20, 20, 1.0);
+  background: rgba(20, 20, 20, 0.75);
   color: #ffffff;
 }
 
@@ -45,7 +45,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: rgba(30, 30, 30, 0.9);
+  background-color: #588597;
 }
 
 #window {

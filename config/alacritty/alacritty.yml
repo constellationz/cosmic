@@ -4,13 +4,13 @@ font:
     family: Fira Code Medium
 
 window:
-  opacity: 0.95
+  opacity: 0.75
 
 # Colors (Hyper)
 colors:
   # Default colors
   primary:
-    background: '0x131313'
+    background: '0x141414'
     foreground: '0xffffff'
   cursor:
     text: '0xF81CE5'

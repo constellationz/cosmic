@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+# Installs packages from the package list
+
+SCRIPT_DIR=$(dirname $0)
+
+awk '{print $1}' $SCRIPT_DIR/../install/packages | sudo xargs pacman -Syyu --noconfirm
+
+for package in $(awk '{print $1}' $SCRIPT_DIR/../install/aurpackages); do 
+	cd /tmp/
+	git clone https://aur.archlinux.org/$package.git
+	cd $package
+	git pull
+	makepkg -si --noconfirm
+done
