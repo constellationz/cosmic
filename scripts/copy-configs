@@ -6,8 +6,8 @@ mkdir -p $HOME/.config
 mkdir -p $HOME/.config/papirus-folders
 
 # Set gtk themes
-gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3-dark"
-gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 gsettings set org.gnome.desktop.interface font-name "Fira Code Medium 10"
 gsettings set org.gnome.desktop.interface document-font-name "Fira Code Medium 10"
 gsettings set org.gnome.desktop.interface monospace-font-name "Fira Code Medium 10"
