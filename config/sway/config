@@ -6,6 +6,9 @@ bar {
     swaybar_command waybar
 }
 
+# Disable XWayland
+xwayland disable
+
 # Make a wob instance for volume and brightness
 #
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
