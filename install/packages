@@ -18,10 +18,10 @@ imagemagick
 mpv
 imv
 pavucontrol
+gucharmap 
 zathura
 zathura-pdf-mupdf
 papirus-icon-theme
-gnu-free-fonts
 rofi-emoji
 wtype
 noto-fonts
@@ -29,6 +29,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 ttf-font-awesome
 ttf-fira-code
+cantarell-fonts
 wl-clipboard
 firefox
 bluez
