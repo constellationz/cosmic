@@ -15,11 +15,6 @@ set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec_always killall wob
 exec_always rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -c ~/.config/wob/wob.ini
 
-# Make certain windows floating by default
-#
-for_window [app_id="pavucontrol"] floating enable, sticky enable, resize set width 550px height 500px
-for_window [app_id="nemo"] floating enable, sticky enable, resize set width 550px height 500px
-
 # Set font
 #
 font pango:Fira Code Medium 11
