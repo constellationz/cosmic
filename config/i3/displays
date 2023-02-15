@@ -1,0 +1,4 @@
+# Display configuration for i3
+# Use xrandr to list available displays and modes
+exec xrandr --output HDMI-2 --mode 2560x1080
+exec xrandr --output HDMI-1-1 --mode 1920x1080 --left-of HDMI-2
