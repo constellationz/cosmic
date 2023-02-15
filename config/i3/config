@@ -10,9 +10,6 @@ focus_wrapping no
 #font pango:DejaVu Sans Mono 8
 font pango:Fira Code Medium 10
 
-# Set wallpaper
-exec --no-startup-id feh --bg-fill ~/.wallpaper
-
 # Windows key
 set $mod Mod4
 
