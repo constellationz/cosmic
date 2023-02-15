@@ -1,10 +1,10 @@
 @import "theme"
 configuration {
-	font: "Fira Code Medium 14";
+	font: "Iosevka Medium 16";
 	show-icons: true;
-	icon-theme: "Papirus Dark";
+	icon-theme: "Arc";
 	terminal: "alacritty";
 	run,drun,window {
-		fallback-icon: "";
+		fallback-icon: "/home/tyler/.rep/dotfiles/config/rofi/icon.png";
 	}
 }

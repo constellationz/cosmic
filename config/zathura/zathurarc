@@ -2,7 +2,6 @@ map u scroll half-up
 map d scroll half-down
 map p toggle_page_mode
 map <BackSpace> scroll full-up
-unmap q
 
 set selection-clipboard "clipboard"
 set sandbox none
@@ -26,29 +25,34 @@ set dbus-raise-window false
 set page-padding 2
 set page-cache-size 64
 
-set completion-bg "#000000" 
-set completion-fg "#ECEFF4"
-set completion-group-bg "#000000" 
-set completion-group-fg "#FF0000"
-set completion-highlight-bg "#000000" 
-set completion-highlight-fg "#88C0D0"
-set default-fg "#E5E9F0"
-set default-bg "#000000" 
-set inputbar-bg "#000000" 
-set inputbar-fg "#ECEFF4"
-set notification-bg "#000000" 
-set notification-fg "#88C0D0"
-set notification-error-bg "#8F323B" 
-set notification-error-fg "#BF616A"
-set notification-warning-bg "#000000" 
-set notification-warning-fg "#EBCB8B"
-set statusbar-bg "#000000" 
-set statusbar-fg "#E5E9F0"
-set highlight-color "#88C0D0"
-set highlight-fg "#2E3440"
-set highlight-active-color "#8FBCBB"
-set highlight-transparency 0.65
-set index-bg "#000000" 
-set index-fg "#ECEFF4"
-set index-active-bg "#000000" 
-set index-active-fg "#88C0D0"
+set render-loading              true
+set notification-error-bg       "#282828"
+set notification-error-fg       "#fb4934"
+set notification-warning-bg     "#282828"
+set notification-warning-fg     "#fabd2f"
+set notification-bg             "#282828"
+set notification-fg             "#b8bb26"
+set completion-bg               "#504945"
+set completion-fg               "#ebdbb2"
+set completion-group-bg         "#3c3836"
+set completion-group-fg         "#928374"
+set completion-highlight-bg     "#83a598"
+set completion-highlight-fg     "#504945"
+set index-bg                    "#504945"
+set index-fg                    "#ebdbb2"
+set index-active-bg             "#83a598"
+set index-active-fg             "#504945"
+set inputbar-bg                 "#282828"
+set inputbar-fg                 "#ebdbb2"
+set statusbar-bg                "#504945"
+set statusbar-fg                "#ebdbb2"
+set highlight-color             "#fabd2f"
+set highlight-active-color      "#fe8019"
+set default-bg                  "#282828"
+set default-fg                  "#ebdbb2"
+set render-loading-bg           "#282828"
+set render-loading-fg           "#ebdbb2"
+set recolor-lightcolor          "#282828"
+set recolor-darkcolor           "#ebdbb2"
+set recolor                     "true"
+set recolor-keephue             true
