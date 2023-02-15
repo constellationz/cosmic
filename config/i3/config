@@ -8,7 +8,7 @@ focus_wrapping no
 # is used in the bar {} block below.
 #font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
-font pango:Fira Code Medium 10
+font pango:FreeSans 10
 
 # Set default decoration appearance
 title_align left
