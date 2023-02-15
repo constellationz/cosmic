@@ -1,6 +1,6 @@
 # Cosmic for Arch Linux
 
-Cosmic is a tiling desktop environment based on sway.
+Cosmic is a collection of programs to make a full tiling desktop on Arch Linux.
 
 ## Motivations 
 
@@ -11,7 +11,7 @@ Cosmic is a tiling desktop environment based on sway.
 
 ## Provided Applications
 
-- Sway
+- i3
 
 ## Attribution
 
