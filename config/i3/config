@@ -1,20 +1,17 @@
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# Display configuration
-include ~/.config/i3/displays
+# Disable focus wrapping
+focus_wrapping no
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Inter 8
+font pango:Fira Code Medium 10
 #font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
 
 # Windows key
 set $mod Mod4
-
-# Alt key
-set $alt Mod1
 
 # Directional keys
 set $left h
@@ -60,7 +57,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $alt+space exec --no-startup-id "rofi -modi drun,run -show drun"
+bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 
 # change focus
 bindsym $mod+$left focus left
@@ -110,7 +107,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -178,10 +175,16 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+# Bind to resize mode
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Start i3bar to display a workspace bar
 bar {
         status_command i3status
 }
+
+# Display configuration
+include ~/.config/i3/displays
+
+# Input configuration
+include ~/.config/i3/input
