@@ -1,8 +1,8 @@
 # Input configuration for i3
 
 # Keyboard repeat rate
-exec --no-startup-id xset r rate 200 30
+exec_always --no-startup-id xset r rate 200 30
 
 # Input configuration
 # Use `xinput` to list input devices
-exec --no-startup-id xinput --set-prop 13 'libinput Accel Speed' -1
+exec_always --no-startup-id xinput --set-prop 13 'libinput Accel Speed' -1
