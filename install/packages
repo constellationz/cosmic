@@ -22,7 +22,6 @@ alsa-utils
 bluez
 bluez-utils
 networkmanager
-thunar
 pavucontrol
 feh
 imv
@@ -31,7 +30,6 @@ zathura
 zathura-pdf-mupdf
 ffmpeg
 imagemagick
-papirus-icon-theme
 ttc-iosevka
 gnu-free-fonts
 noto-fonts
