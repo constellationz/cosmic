@@ -2,6 +2,7 @@
 # Installs packages from the package list
 
 SCRIPT_DIR=$(dirname $0)
+SERVICE_DIR=$SCRIPT_DIR/../services
 
 awk '{print $1}' $SCRIPT_DIR/../install/packages | sudo xargs pacman -Syyu --noconfirm
 
@@ -21,7 +22,18 @@ do
 	xdg-mime default $line
 done
 
+# Add custom user services
+for service in $SERVICE_DIR/*; do
+	sudo cp $service /etc/systemd/system/$(basename $service)
+done
+
 # Add default user to light group
 sudo usermod -aG video $USER
+
+# Enable the slock service
+sudo systemctl enable slock@$USER.service
+
+# Make ly the default login manager
+sudo systemctl enable ly.service
 
 echo "Done!"
