@@ -1,8 +1,8 @@
 # Display configuration for i3
 
 # Use xrandr to list available displays and modes
-exec_always --no-startup-id xrandr --output HDMI-2 --mode 2560x1080 --rate 75 --primary
-exec_always --no-startup-id xrandr --output HDMI-1-1 --mode 1920x1080 --rate 60 --left-of HDMI-2
+exec_always --no-startup-id xrandr --output DP-2 --mode 2560x1080 --rate 75 --primary
+exec_always --no-startup-id xrandr --output HDMI-2 --mode 1920x1080 --rate 60 --left-of HDMI-2
 
 # Assign workspaces to displays
 workspace $ws1 output HDMI-1-1
