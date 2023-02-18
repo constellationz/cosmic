@@ -7,6 +7,7 @@ picom
 polybar
 kitty
 slock
+dunst
 xorg
 xsel
 xclip
@@ -15,6 +16,7 @@ xorg-xrandr
 xorg-xset
 xorg-xinput
 light
+maim
 rofi
 rofi-emoji
 pipewire
