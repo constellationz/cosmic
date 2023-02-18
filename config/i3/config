@@ -55,6 +55,16 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
 
+# Print screen shortcuts
+# Screenshot region
+bindsym Print exec .config/i3/ssregion.sh
+
+# Screenshot window with dropshadow effect
+bindsym Shift+Print exec .config/i3/sswindow.sh
+
+# Dump last screenshot to file
+bindsym $mod+Shift+Print exec .config/i3/dumpss.sh
+
 # Raise and lower audio volume with pipewire
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 2%+ && $refresh_i3status
