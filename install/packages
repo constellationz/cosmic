@@ -18,6 +18,10 @@ light
 rofi
 rofi-emoji
 pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+pipewire-audio
 alsa-utils
 bluez
 bluez-utils
