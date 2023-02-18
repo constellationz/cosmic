@@ -219,4 +219,4 @@ client.background       #303030
 include ~/.config/i3/displays
 
 # Input configuration
-include ~/.config/i3/input
+exec_always --no-startup-id ~/.config/i3/input.sh
