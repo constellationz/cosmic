@@ -3,7 +3,7 @@
 # Notify user when screenshot is dumped or if not possible
 
 SSDIR="`xdg-user-dir DESKTOP`/Screenshots"
-SSNAME="`date -u +%Y_%m_%d_%H_%M_%S_%N`.png"
+SSNAME="Screenshot_`date -u +%Y_%m_%d_%H_%M_%S_%N`.png"
 
 mkdir -p $SSDIR
 
