@@ -8,6 +8,7 @@ set sandbox none
 set continuous-hist-save true
 set window-title-home-tilde true
 set statusbar-home-tilde true
+set filemonitor "signal"
 
 set recolor-keephue true
 set recolor-reverse-video false
