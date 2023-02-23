@@ -1,8 +1,8 @@
 @import "theme"
 configuration {
-	font: "Iosevka Medium 16";
+	font: "Inconsolata 16";
 	show-icons: true;
-	icon-theme: "Arc";
+	icon-theme: "Papirus";
 	terminal: "alacritty";
 	run,drun,window {
 		fallback-icon: "/home/tyler/.rep/dotfiles/config/rofi/icon.png";

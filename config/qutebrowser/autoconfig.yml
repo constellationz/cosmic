@@ -22,7 +22,7 @@ settings:
     https://mail.proton.me#mailto=%25s: false
     https://outlook.office.com?mailtouri=%25s: false
   fonts.default_family:
-    global: FreeSans
+    global: Inconsolata
   fonts.default_size:
     global: 10pt
   messages.timeout:
