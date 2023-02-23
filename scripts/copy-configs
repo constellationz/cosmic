@@ -34,5 +34,3 @@ if [ ! -f "$HOME/.wallpaper" ]; then
 	echo "Setting wallpaper for the first time..."	
 	$SCRIPT_DIR/set-wallpaper.sh WALLPAPER_DIR/wallpaper.svg
 fi
-
-echo "Done!"
