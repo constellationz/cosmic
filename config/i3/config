@@ -20,7 +20,7 @@ gaps inner 2
 gaps outer 1
 
 # Default terminal emulator
-set $term kitty
+set $term alacritty
 
 # Windows key
 set $mod Mod4
