@@ -24,6 +24,6 @@ settings:
   fonts.default_family:
     global: Inconsolata
   fonts.default_size:
-    global: 10pt
+    global: 11pt
   messages.timeout:
     global: 1000
