@@ -17,7 +17,7 @@ for_window [all] title_window_icon padding 4px
 
 # Set gaps
 gaps inner 2
-gaps outer 1
+gaps outer 0
 
 # Default terminal emulator
 set $term alacritty
