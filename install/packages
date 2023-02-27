@@ -44,6 +44,8 @@ gnu-free-fonts
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+ttf-inconsolata
+ttf-inconsolata-nerd
 ttf-font-awesome
 papirus-icon-theme
 firefox

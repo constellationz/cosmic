@@ -4,6 +4,7 @@
 SCRIPT_DIR=$(dirname $0)
 SERVICE_DIR=$SCRIPT_DIR/../services
 
+# Update all packages
 awk '{print $1}' $SCRIPT_DIR/../install/packages | sudo xargs pacman -Syyu --noconfirm
 
 # Install AUR packages
@@ -13,6 +14,15 @@ for package in $(awk '{print $1}' $SCRIPT_DIR/../install/aurpackages); do
 	cd $package
 	git pull
 	makepkg -si --noconfirm
+done
+
+# Download repositories
+for repo in $(awk '{print $1}' $SCRIPT_DIR/../install/repositories); do 
+	cd /tmp/
+	git clone $repo
+	dir=basename $repo | awk -F'[_.]' '{print $(NF-1)}'
+	cd $dir
+	git pull
 done
 
 # Set defaults
