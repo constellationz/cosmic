@@ -7,9 +7,10 @@ mkdir -p $HOME/.config
 # Set gtk themes
 gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Material-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Gruvbox-Material-Dark"
+gsettings set org.gnome.desktop.interface cursor-theme "Simp1e-Gruvbox-Dark"
 gsettings set org.gnome.desktop.interface font-name "FreeSans 10"
 gsettings set org.gnome.desktop.interface document-font-name "FreeSans 10"
-gsettings set org.gnome.desktop.interface monospace-font-name "Iosevka 10"
+gsettings set org.gnome.desktop.interface monospace-font-name "Inconsolata 10"
 
 # Copy configs to config directory
 SCRIPT_DIR=$(dirname $0)
