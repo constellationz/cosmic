@@ -37,6 +37,9 @@ for service in $SERVICE_DIR/*; do
 	sudo cp $service /etc/systemd/system/$(basename $service)
 done
 
+# Add ly configuration for pam.d
+sudo cp $SCRIPT_DIR/etc/ly /etc/pam.d/ly
+
 # Add default user to light group
 sudo usermod -aG video $USER
 
