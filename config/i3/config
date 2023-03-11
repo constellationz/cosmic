@@ -87,6 +87,10 @@ bindsym $mod+Tab exec --no-startup-id "rofi -show window"
 # show emoji picker
 bindsym $mod+period exec --no-startup-id "rofi -show emoji"
 
+# start and kill compositor
+bindsym $mod+F11 exec --no-startup-id "killall picom"
+bindsym $mod+F12 exec --no-startup-id "picom"
+
 # change focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
