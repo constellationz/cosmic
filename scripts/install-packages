@@ -40,6 +40,9 @@ done
 # Add ly configuration for pam.d
 sudo cp $SCRIPT_DIR/etc/ly /etc/pam.d/ly
 
+# Add ly configuration for pam.d
+sudo cp $SCRIPT_DIR/etc/ly_config.ini /etc/ly/config.ini
+
 # Add default user to light group
 sudo usermod -aG video $USER
 
