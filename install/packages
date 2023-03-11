@@ -16,6 +16,7 @@ xdotool
 xorg-xrandr
 xorg-xset
 xorg-xinput
+xorg-xinit
 light
 maim
 rofi
@@ -48,4 +49,5 @@ ttf-inconsolata
 ttf-inconsolata-nerd
 ttf-font-awesome
 papirus-icon-theme
+gnome-keyring
 firefox
